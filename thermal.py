@@ -110,11 +110,11 @@ class Thermal:
 
     def get_data(self):
 
-        frame = [0] * 768
+        data = [0] * 768
 
         while True:
             try:
-                self.mlx.getFrame(frame)
+                self.mlx.getFrame(data)
             except ValueError:
                 continue
             break
