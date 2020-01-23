@@ -14,7 +14,7 @@ class Camera(BaseCamera):
     @staticmethod
     def frames():
         while True:
-            time.sleep(1)
+            # time.sleep(1)
 
             yield Camera.thermal.get_data()
             # yield Camera.imgs[int(time.time()) % 2]

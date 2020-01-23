@@ -9,6 +9,7 @@ class Thermal:
 
     def __init__(self):
         self.mlx = seeed_mlx90640.grove_mxl90640()
+        self.mlx.refresh_rate = seeed_mlx90640.RefreshRate.REFRESH_2_HZ
 
     @staticmethod
     def mapValue(value, curMin, curMax, desMin, desMax):
