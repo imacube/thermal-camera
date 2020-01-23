@@ -165,7 +165,7 @@ class Thermal:
         img = img.rotate(90)
         img = img.resize((width, height))
         imgByteArr = io.BytesIO()
-        img.save(imgByteArr, format=img.format)
+        img.save(imgByteArr, format='PNG')
         imgByteArr = imgByteArr.getvalue()
         return imgByteArr
         # img.show()
