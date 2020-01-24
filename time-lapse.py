@@ -180,7 +180,7 @@ class Thermal:
         img = img.transpose(Image.FLIP_LEFT_RIGHT)
         img = img.resize((width, height))
         img.save('img{:06d}.png'.format(self.image_index))
-        img.save(imgByteArr, format='PNG')
+        # img.save(imgByteArr, format='PNG')
         # imgByteArr = io.BytesIO()
         # imgByteArr = imgByteArr.getvalue()
         # return imgByteArr
