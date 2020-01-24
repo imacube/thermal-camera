@@ -1,8 +1,9 @@
 import colorsys
 import io
 import os
+import time
 
-import seeed_mlx90640
+import seeed_mx90640
 from PIL import Image
 
 
@@ -178,9 +179,22 @@ class Thermal:
         img = img.rotate(90)
         img = img.transpose(Image.FLIP_LEFT_RIGHT)
         img = img.resize((width, height))
-        imgByteArr = io.BytesIO()
+        img.save('img{:06d}.png'.format(self.image_index))
         img.save(imgByteArr, format='PNG')
-        imgByteArr = imgByteArr.getvalue()
-        return imgByteArr
+        # imgByteArr = io.BytesIO()
+        # imgByteArr = imgByteArr.getvalue()
+        # return imgByteArr
         # img.show()
         # img.save('hues2.png')
+
+
+def main():
+    thermal = Thermal()
+
+    while True:
+        thermal.get_data()
+        time.sleep(1/2)
+
+
+if __name__ == '__main__':
+    main()
