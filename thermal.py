@@ -164,7 +164,7 @@ class Thermal:
         colors = bytes(colors)
         img = Image.frombytes('RGB', (32, 24), colors)
         img = img.rotate(90)
-        img = img.transpose(PIL.Image.FLIP_LEFT_RIGHT)
+        img = img.transpose(Image.FLIP_LEFT_RIGHT)
         img = img.resize((width, height))
         imgByteArr = io.BytesIO()
         img.save(imgByteArr, format='PNG')
