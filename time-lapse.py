@@ -20,6 +20,7 @@ def main():
                 continue
             csvwriter = csv.writer(csvfile)
             csvwriter.writerow(frame)
+            time.sleep(10)
 
 
 if __name__ == '__main__':
