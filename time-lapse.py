@@ -2,6 +2,7 @@ import colorsys
 import io
 import os
 import time
+import csv
 
 import seeed_mlx90640
 from PIL import Image
