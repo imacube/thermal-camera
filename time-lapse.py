@@ -3,7 +3,7 @@ import io
 import os
 import time
 
-import seeed_mx90640
+import seeed_mlx90640
 from PIL import Image
 
 
