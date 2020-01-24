@@ -1,5 +1,6 @@
 import colorsys
 import io
+import os
 
 import seeed_mlx90640
 from PIL import Image
@@ -10,6 +11,17 @@ class Thermal:
     def __init__(self):
         self.mlx = seeed_mlx90640.grove_mxl90640()
         self.mlx.refresh_rate = seeed_mlx90640.RefreshRate.REFRESH_2_HZ
+
+        self.image_index = 0
+
+        img_list = list()
+
+        for f in os.listdir('.'):
+            if f.startswith('img'):
+                img_list.append(int(f[3:-4]))
+
+        if len(img_list):
+            self.image_index = max(img_list)
 
     @staticmethod
     def mapValue(value, curMin, curMax, desMin, desMax):
@@ -166,6 +178,7 @@ class Thermal:
         img = img.rotate(90)
         img = img.transpose(Image.FLIP_LEFT_RIGHT)
         img = img.resize((width, height))
+        img.save('img{:06d}.png'.format(self.image_index))
         imgByteArr = io.BytesIO()
         img.save(imgByteArr, format='PNG')
         imgByteArr = imgByteArr.getvalue()
