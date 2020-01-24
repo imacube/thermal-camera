@@ -10,7 +10,7 @@ from PIL import Image
 def main():
     mlx = seeed_mlx90640.grove_mxl90640()
     mlx.refresh_rate = seeed_mlx90640.RefreshRate.REFRESH_2_HZ  # The fastest for raspberry 4
-    with open('thermal.csv', 'wa') as csvfile:
+    with open('thermal.csv', 'a') as csvfile:
         while True:
             frame = [0] * 768
             try:
