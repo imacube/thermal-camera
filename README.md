@@ -1,3 +1,9 @@
+# Converting Images to Video
+
+```shell script
+ffmpeg -r 5 -i images-person/img%04d.png -vcodec libx264 -pix_fmt yuv420p -y movie.mp4
+```
+
 # Sources
 
 * http://wiki.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array/
