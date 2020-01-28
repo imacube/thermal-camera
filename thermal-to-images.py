@@ -1,3 +1,5 @@
+"""Convert raw image data into PNG images files."""
+
 import csv
 
 from thermal_data import ThermalData
@@ -22,6 +24,6 @@ for h in data:
     except TypeError:
         continue
 
-    img.save('images-person/img{0:04}.png'.format(img_output_index))
+    img.save('images/img{0:04}.png'.format(img_output_index))
     img_count += 1
     img_output_index += 1

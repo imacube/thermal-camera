@@ -1,3 +1,9 @@
+"""Image data processing for the thermal camera.
+
+The methods below were copied from https://github.com/gobuyun/seeed_ircamera/blob/master/seeed_python_ircamera.py. A
+copy of this code can be found in this repo in the file: `seeed_python_ircamera.py`.
+"""
+
 import colorsys
 
 from PIL import Image

@@ -1,11 +1,9 @@
-import colorsys
-import io
-import os
-import time
+"""Time lapse photography with the thermal camera."""
+
 import csv
+import time
 
 import seeed_mlx90640
-from PIL import Image
 
 
 def main():

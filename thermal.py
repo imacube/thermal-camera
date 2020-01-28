@@ -1,3 +1,5 @@
+"""Read data from the thermal camera and return a bytes object with the image data."""
+
 import io
 
 import seeed_mlx90640
@@ -14,6 +16,10 @@ class Thermal:
         self.thermal_data = ThermalData()
 
     def get_serial_data(self):
+        """
+
+        :return: bytes object containing image data.
+        """
 
         data = [0] * 768
 

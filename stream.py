@@ -1,3 +1,5 @@
+"""Run this script to host a simple web page that streams the thermal camera images."""
+
 from flask import Flask, render_template, Response
 
 from camera import Camera
@@ -27,4 +29,4 @@ def video_feed():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True)
+    app.run(host='0.0.0.0', threaded=True)  # Defaults to port 5000
