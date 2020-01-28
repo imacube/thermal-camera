@@ -3,3 +3,7 @@ venv
 # Directory containing images generated from raw thermal data
 images
 images-person
+
+# Data files
+*.csv
+*.mp4
