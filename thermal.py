@@ -11,7 +11,7 @@ class Thermal:
 
     def __init__(self):
         self.mlx = seeed_mlx90640.grove_mxl90640()
-        self.mlx.refresh_rate = seeed_mlx90640.RefreshRate.REFRESH_2_HZ
+        self.mlx.refresh_rate = seeed_mlx90640.RefreshRate.REFRESH_2_HZ  # The fastest for Raspberry Pi Zero W
 
         self.thermal_data = ThermalData()
 
