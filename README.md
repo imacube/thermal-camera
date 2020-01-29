@@ -74,7 +74,7 @@ Run `time-lapse.py` or write a simple script to call `thermal.py` to capture the
 Run `time-lapse.py`. Data is written to `thermal.csv`. Images are captured as raw numeric data from the camera 
 every 10 seconds and stored in the CSV file. Use `thermal-to-images.py` to convert the raw data into PNG images.
 
-The data is formatted as one line per image.
+The data is formatted as one line per image. An example file is `thermal.csv`.
 
 ## Converting Images to Video
 
