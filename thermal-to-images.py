@@ -23,6 +23,8 @@ for h in data:
         img = thermal.get_data(h)
     except TypeError:
         continue
+    except ValueError:
+        continue
 
     img.save('images/img{0:04}.png'.format(img_output_index))
     img_count += 1

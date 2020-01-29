@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Changed `time-lapse.py` so it runs faster (i2c baudrate increased on Pi), has currently commented out lines
   for limiting how many images it captures and moved some lines of code around to try and boost performance.
+  
+### Fixed
+- Added exception catch to `thermal-to-images.py` for a `ValueError`. Caused by `Nan` conversion to float.
 
 ## [1.0.1] - 2020-01-29
 ### Added
