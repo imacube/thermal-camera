@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Notes on increasing the i2c baudrate.
+
 ## [1.0.1] - 2020-01-29
 ### Added
 - Blank line at the end of `requirements.txt` for clarity.

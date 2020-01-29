@@ -61,6 +61,19 @@ mlx.refresh_rate = seeed_mlx90640.RefreshRate.REFRESH_8_HZ  # The fastest for ra
 # REFRESH_64_HZ = 0b111  # 64Hz
 ```
 
+#### Boosting Refresh Rate
+
+Always be aware when editing boot options your Pi might not boot.
+
+Find the `dtparam=i2c_arm=on` line in `/boot/config.txt` and replace it with the one below.
+
+```shell script
+dtparam=i2c_arm=on,i2c_arm_baudrate=400000
+```
+
+This sets the i2c baudrate to the maximum supported by the CPU, the default is `100000`. See the links below for 
+peripheral specification and device tree.
+
 # Streaming
 
 Run the `stream.py` script to host a small website with Flask that streams what the thermal camera sees.
@@ -93,3 +106,5 @@ ffmpeg -r 5 -i images/img%04d.png -vcodec libx264 -pix_fmt yuv420p -y movie.mp4
   * `Video Streaming with Flask.pdf`
 * [Flask Video Streaming Revisited](https://blog.miguelgrinberg.com/post/flask-video-streaming-revisited) 
   * `Flask Video Streaming Revisited.pdf`
+* [Raspberry Pi BCM2835 Peripheral Specification](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/README.md)
+* [Raspberry Pi Device Tree Overlays](https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README)
