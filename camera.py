@@ -15,6 +15,6 @@ class Camera(BaseCamera):
     def frames():
         while True:
             # time.sleep(1)
+            # yield Camera.imgs[int(time.time()) % 2]
 
             yield Camera.thermal.get_data()
-            # yield Camera.imgs[int(time.time()) % 2]
