@@ -17,4 +17,4 @@ class Camera(BaseCamera):
             # time.sleep(1)
             # yield Camera.imgs[int(time.time()) % 2]
 
-            yield Camera.thermal.get_data()
+            yield Camera.thermal.get_serial_data()
