@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2020-01-29
+### Added
+- Blank line at the end of `requirements.txt` for clarity.
+
+### Fixed
+- `camera.py` was loading removed images, this was no longer needed.
+- `camera.py` was calling the wrong method.
+- `thermal.py` was not calling the class method.
+
 ## [1.0.0] - 2020-01-28
 ### Added
 - Initial version.
