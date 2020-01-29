@@ -30,7 +30,7 @@ class Thermal:
                 continue
             break
 
-        img = self.thermal_data(data)
+        img = self.thermal_data.get_data(data)
         imgByteArr = io.BytesIO()
         img.save(imgByteArr, format='PNG')
         imgByteArr = imgByteArr.getvalue()
