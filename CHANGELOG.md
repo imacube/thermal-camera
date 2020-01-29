@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Notes on increasing the i2c baudrate.
 
+### Changed
+- Changed `time-lapse.py` so it runs faster (i2c baudrate increased on Pi), has currently commented out lines
+  for limiting how many images it captures and moved some lines of code around to try and boost performance.
+
 ## [1.0.1] - 2020-01-29
 ### Added
 - Blank line at the end of `requirements.txt` for clarity.
