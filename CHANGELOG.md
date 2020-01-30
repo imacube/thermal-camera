@@ -7,11 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Notes on increasing the i2c baudrate.
-- `__pycache__` to `.gitignore`
+- `__pycache__` to `.gitignore`.
 
 ### Changed
 - Changed `time-lapse.py` so it runs faster (i2c baudrate increased on Pi), has currently commented out lines
   for limiting how many images it captures and moved some lines of code around to try and boost performance.
+
+### Removed
+- Image range sub-set from `thermal-to-images.py`.
   
 ### Fixed
 - Added exception catch to `thermal-to-images.py` for a `ValueError`. Caused by `Nan` conversion to float.

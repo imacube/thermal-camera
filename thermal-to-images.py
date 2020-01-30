@@ -14,11 +14,6 @@ img_output_index = 0
 thermal = ThermalData()
 
 for h in data:
-    if 3150 < img_count < 3368:
-        pass
-    else:
-        img_count += 1
-        continue
     try:
         img = thermal.get_data(h)
     except TypeError:
